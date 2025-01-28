@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* || REST */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* || VARIABLES */
+:root {
+  /* COLORS */
+  --GREY-900: #141414;
+  --GREY-800: #1F1F1F;
+  --GREY-700: #333333;
+  --GREEN: #C4F82A;
+  --WHITE: #FFFFFF;
+
+  /* TYPOGRAPHY */
+  --FF: "Inter", serif;
+
+  /* TEXT PRESETS */
+  --TEXT-PRESET-1: bold 24px/150% var(--FF);
+  --TEXT-PRESET-2: normal 14px/150% var(--FF);
+  --TEXT-PRESET-2-BOLD: bold 14px/150% var(--FF);
+
+  /* BUTTON */
+
+}
+
+/* || UTILITY CLASSES */
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.center {
+  text-align: center;
+}
+
+.responsive-image {
+  display: none;
+}
+
+/* MOBILE FIRST DESIGN */
+/* || GENERAL STYLES */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  background-color: var(--GREY-900);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: normal;
+}
+
+a:any-link {
+  text-decoration: none;
+  color: black;
+}
+
+/* CARD */
+.card {
+    width: 327px;
+    height: 579px;
+    margin: 116.5px 24px;
+    padding: 24px;
+    background-color: var(--GREY-800);
+    border-radius: 12px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+/* IMAGE */
+.card__profile-pic {
+    width: 88px;
+    height: 88px;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+/* NAME LOCATION */
+.card__name-location {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-bottom: 24px;
+    gap: 4px;
+}
+
+.title {
+    font: var(--TEXT-PRESET-1);
+    color: var(--WHITE);
+}
+
+.subtitle {
+    font: var(--TEXT-PRESET-2-BOLD);
+    color: var(--GREEN);
+}
+
+/* BIO */
+.card__bio {
+    margin-bottom: 24px;
+}
+
+.bio {
+    font: var(--TEXT-PRESET-2);
+    color: var(--WHITE);
+}
+
+/* LINKS */
+.card__links {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    gap: 16px;
+}
+
+.link {
+    height: 45px;
+    padding: 12px;
+    gap: 8px;
+    background-color: var(--GREY-700);
+    border: 0;
+    border-radius: 8px;
+    font: var(--TEXT-PRESET-2-BOLD);
+    color: var(--WHITE);
+}
+
+/* TABLET */
+@media  screen and (min-width: 768px) {
+    
+    /* CARD */
+    .card {
+        width: 456px;
+        height: 611px;
+        margin: 206.5px 156px;
+        padding: 40px;
+    }
+}
+
+/* DESKTOP */
+@media  screen and (min-width: 992px) {
+    
+    /* CARD */
+    .card {
+        width: 384px;
+        margin: 174.5px 528px;
+    }
+
+    .link:hover, 
+    .link:focus {
+        background-color: var(--GREEN);
+        color: var(--GREY-700);
+    }
+}
